@@ -40,7 +40,7 @@ const Modal = ({
         e.preventDefault();
 
         if([ nombre, cantidad, categoria ].includes('')) {
-            setMensaje('Todos los campos son obligatorios')
+            setMensaje('Todos los campos son requeridos')
 
             setTimeout(() => {
                 setMensaje('')
@@ -74,7 +74,7 @@ const Modal = ({
                     <input 
                         id="nombre"
                         type="text"
-                        placeholder="Añade el Nombre del Gasto"
+                        placeholder="Gasto"
                         value={nombre}
                         onChange={ e => setNombre(e.target.value)}
                     />
@@ -86,7 +86,7 @@ const Modal = ({
                     <input 
                         id="cantidad"
                         type="number"
-                        placeholder=" Cantidad "
+                        placeholder="Cantidad"
                         value={cantidad}
                         onChange={ e => setCantidad(Number(e.target.value))}
                     />
