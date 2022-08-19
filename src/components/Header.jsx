@@ -7,13 +7,14 @@ const Header = ({presupuesto,
                  setPresupuesto,
                  isValidPresupesto,
                  setIsValidPresupuesto,
-                 gastos
+                 gastos,
+                 setGastos
                 }) => {
   return (
     <header>
         <h1>Planificador de Gastos</h1>
          {isValidPresupesto?(
-          <ControlPresupesto presupuesto={presupuesto} gastos={gastos}/>
+          <ControlPresupesto presupuesto={presupuesto} gastos={gastos} setGastos={setGastos} setPresupuesto={setPresupuesto} setIsValidPresupuesto={setIsValidPresupuesto}/>
          ):(
           <NuevoPresupuesto
             presupuesto={presupuesto}
