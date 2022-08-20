@@ -31,9 +31,9 @@ const ControlPresupuesto = ({
 
 
     const formatearCantidad = (cantidad) => {
-        return cantidad.toLocaleString('en-US', {
+        return cantidad.toLocaleString('es-ES', {
             style: 'currency',
-            currency: 'USD'
+            currency: 'EUR'
          })
     }
 
@@ -57,7 +57,7 @@ const ControlPresupuesto = ({
                         textColor: porcentaje > 100 ? '#DC2626' : '#3B82F6',
                     })}
                     value={porcentaje}
-                    text={`${porcentaje}% Gastado`}
+                    text={`${porcentaje} % Gastado`}
                 />
             </div>
 
